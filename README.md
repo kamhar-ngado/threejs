@@ -1,8 +1,8 @@
-## install  threejs
+### install  threejs
 npm install three
 
-## install vite
-## npm init vitejs/app
+### install vite
+ npm init vitejs/app
 
-## run the projects
-## npm run dev
+### run the projects
+ npm run dev
