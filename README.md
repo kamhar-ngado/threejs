@@ -1,3 +1,8 @@
-# threejs
-install kite
-npm run dev
+## install  threejs
+## npm install three
+
+## install vite
+## npm init vitejs/app
+
+## run the projects
+## npm run dev
