@@ -10,7 +10,7 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
-  0.1,
+  10,
   1000
 );
 
@@ -27,16 +27,17 @@ const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 const material = new THREE.MeshStandardMaterial({
   color: silver,
 });
+
 const torus = new THREE.Mesh(geometry, material);
 scene.add(torus);
 
-const poinLight = new THREE.PointLight(silver);
-poinLight.position.set(50, 50, 50);
+const light = new THREE.PointLight(silver);
+light.position.set(50, 50, 50);
 
 const ambientlight = new THREE.AmbientLight(white);
-scene.add(poinLight, ambientlight);
+scene.add(light, ambientlight);
 
-const lightHelper = new THREE.PointLightHelper(poinLight);
+const lightHelper = new THREE.PointLightHelper(light);
 const gridHelper = new THREE.GridHelper(200, 50);
 scene.add(lightHelper, gridHelper);
 
