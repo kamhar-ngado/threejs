@@ -4,7 +4,7 @@ import { Material, PointLight } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const white = 0xffffff;
-const silver = 0xc0c0c0;
+const silver = 0xff6600;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
