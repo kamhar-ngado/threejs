@@ -4,7 +4,7 @@ import { Material, PointLight } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const white = 0xffffff;
-const silver = 0xff6600;
+const silver = 0xd8d7d7;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -57,8 +57,7 @@ function addStar() {
 }
 Array(200).fill().forEach(addStar);
 
-const galaxy = new THREE.TextureLoader().load("img/galaxy.jpg");
-scene.background = galaxy;
+
 
 function animate() {
   requestAnimationFrame(animate);
