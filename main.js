@@ -4,7 +4,7 @@ import { Material, PointLight } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const white = 0xffffff;
-const silver = 0xb0c6cd;
+const blue = 0x00bfff;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -25,13 +25,13 @@ renderer.render(scene, camera);
 
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 const material = new THREE.MeshStandardMaterial({
-  color: silver,
+  color: blue,
 });
 
 const torus = new THREE.Mesh(geometry, material);
 scene.add(torus);
 
-const light = new THREE.PointLight(silver);
+const light = new THREE.PointLight(blue);
 light.position.set(50, 50, 50);
 
 const ambientlight = new THREE.AmbientLight(white);
@@ -56,7 +56,8 @@ function addStar() {
   scene.add(star);
 }
 Array(200).fill().forEach(addStar);
-
+const galaxy = new THREE.TextureLoader().load("img/galaxy.jpg");
+scene.background = galaxy;
 
 function animate() {
   requestAnimationFrame(animate);
